@@ -1,0 +1,12 @@
+<!-- Interpolation binding -->
+<h1>Name: {{fullName}}</h1>
+<h1>Age: {{age}}</h1>
+
+<!-- Property binding -->
+<!-- Two way binding -->
+<input type="text" [(ngModel)]="email" /> {{email}}
+<!-- De no tim thuoc tinh cua component thi phai o trong [] -->
+<img class="w-25 d-block" [src]="avatar" />
+
+<!-- Event binding -->
+<button class="btn btn-success" (click)="showMessage(fullName)">Show message</button>

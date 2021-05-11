@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="display-4 text-center">Mua Hàng Online</h1>
+
+    <nav class="nav justify-content-center my-3">
+        <p>Filter by type: <span>
+                <select [(ngModel)]="filterVal" (ngModelChange)="test()">
+                    <option value="0">-Choose type-</option>
+                    <option value="Oppo">Oppo</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Apple">Apple</option>
+                </select>
+            </span></p>
+    </nav>
+    <p>{{filterVal}}</p>
+    <div class="row mt-4">
+        <div class="col-4" *ngFor="let product of filterArr">
+            <app-bt-product-item [product]="product" (addCartEmitter)="addItem($event)"></app-bt-product-item>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-12 mt-5">
+            <span class="bg-warning text-white px-3 py-2">Thêm Hàng Thành Công</span>
+        </div>
+    </div>
+    <app-bt-gio-hang></app-bt-gio-hang>
+</div>

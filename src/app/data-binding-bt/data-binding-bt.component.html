@@ -1,0 +1,11 @@
+<h2>Register Form</h2>
+<p class="text-bolt">Email:</p>
+<input type="text" placeholder="Email" [(ngModel)]="email" />
+<p class="text-bolt">FullName:</p>
+<input #fullNameInput type="text" placeholder="FullName" />
+<br>
+<br>
+<button class="btn btn-success" (click)="setFullName(fullNameInput.value)">Submit</button>
+
+<h3>Email: {{email}}</h3>
+<h3>FullName: {{FullName}}</h3>

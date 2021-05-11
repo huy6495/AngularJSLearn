@@ -1,0 +1,38 @@
+<p>crud-product-bt works!</p>
+<div class="container">
+    <input [(ngModel)]="tenSP" type="text" placeholder="Tên SP" class="mx-2" />
+    <input [(ngModel)]="maSP" type="text" placeholder="Mã SP" class="mx-2" />
+    <input placeholder="Giá SP" [(ngModel)]="giaSP" type="text" placeholder="Giá SP" class="mx-2" />
+    <button (click)="onAddProduct()" class="btn btn-success">Thêm sản phẩm</button>
+</div>
+
+<br>
+<br>
+<div class="container">
+    <h3 class="bg-dark text-light">Danh mục sản phẩm</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Mã SP</th>
+                <th>Tên SP</th>
+                <th>Giá SP</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prod of productList | paginate: { itemsPerPage: 3, currentPage: page }; let i = index">
+                <td>{{i+1}}</td>
+                <td>{{prod.MaSP}}</td>
+                <td>{{prod.TenSP}}</td>
+                <td>{{prod.Gia}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="onDelete(prod.MaSP)">Xóa</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <pagination-controls (pageChange)="page = $event">
+    </pagination-controls>
+</div>

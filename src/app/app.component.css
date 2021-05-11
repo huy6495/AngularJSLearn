@@ -1,0 +1,31 @@
+.right-margin {
+    margin-right: 5px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    padding: 20px 40px;
+    margin: 10px;
+    border: 2px solid black;
+}
+
+.red-border{
+    border: 2px solid red
+}
+
+.yellow-background{
+    background-color: yellow;
+}
+
+.saveable {
+	color: limegreen;
+}
+
+.textGreen {
+    color: limegreen;
+}
+
+.redBackground{
+    background-color: red;
+}

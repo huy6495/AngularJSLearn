@@ -1,0 +1,10 @@
+.booked:disabled,
+.booked{
+  border: 1px solid #999999;
+  background-color: pink;
+ 
+}
+
+.isBook{
+    background-color: limegreen;
+}

@@ -1,0 +1,8 @@
+<div class="card p-2">
+    <h3 class="text-success text-center">{{product.name}}</h3>
+    <img style="height:340px;" [src]="product.image" class="w-100" alt="">
+    <p>
+        {{product.description}}
+    </p>
+    <button (click)="addCart(product)" class="btn btn-success">Cart</button>
+</div>

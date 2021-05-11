@@ -1,0 +1,2 @@
+<button class="btn btn-secondary" style="width: 40px;" (click)="onSelect()"
+        [ngClass]="{'booked': seat.TrangThai, 'isBook': isBooking}" [disabled]="seat.TrangThai">{{seat.SoGhe}}</button>
